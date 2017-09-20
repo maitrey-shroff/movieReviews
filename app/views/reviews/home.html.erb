@@ -1,5 +1,7 @@
 <h1>Movie ReVues</h1>
 
 <div id="app">
-  {{message}}
+  <div v-for="movie in movies">
+    <h2>{{ movie.original_title }}</h2>
+  </div>
 </div>

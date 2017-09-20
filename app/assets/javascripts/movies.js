@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         type: "GET",
         success: function(result){
           this.movies = result;
-          console.log(this.movies);
         }.bind(this)
       });
     },

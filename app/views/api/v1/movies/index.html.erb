@@ -1,9 +1,10 @@
-<% @movies.each do |movie| %>
-
-  <%= movie["id"] %>
-
-  </br>
-  ------
-  </br>
-
-<% end %>
+<div id="app">
+  <h1>Movie ReVues</h1>
+  <div v-for="movie in movies">
+    <img :src="movie.poster"/>
+    <h2>{{ movie.title }}</h2>
+    <h5>Release date: {{ movie.release_date}}</h5>
+    <p><b>Overview: </b>{{ movie.overview}}</p>
+    </br>
+  </div>
+</div>
