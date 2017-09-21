@@ -17,7 +17,7 @@
           <img :src="movie.poster"/>
           <h5>Release Date: {{ movie.release_date }}</h5>
           <p><b>Overview:</b> {{ movie.overview }}</p>
-          <p><a class="btn btn-primary btn-md" href="" role="button">ReVue movie</a></p>
+          <p><a class="btn btn-primary btn-md" :href="movie.review_path" role="button">ReVue movie</a></p>
         </div>
       </div> <!-- jtron -->
     </div> <!-- col -->

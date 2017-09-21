@@ -1,0 +1,34 @@
+<div class="container">
+
+<%= form_tag '/create', method: :post do %>
+
+  <%= hidden_field_tag :movie_id, @review.movie_id, :value => @movie_id %>
+  <%= hidden_field_tag :movie_name, @review.movie_name, :value => @movie_name %>
+
+  <div>
+    <%= label_tag :email_address %>:
+    <%= text_field_tag :email_address, @review.email_address %>
+  </div>
+
+  <div>
+    <%= label_tag :review_date %>:
+    <%= text_field_tag :review_date, @review.review_date %>
+  </div>
+
+  <div>
+    <%= label_tag :rating %>:
+    <%= text_field_tag :rating, @review.rating %>
+  </div>
+
+  <div>
+    <%= label_tag :comment %>:
+    <%= text_field_tag :comment, @review.comment %>
+  </div>
+
+  <div>
+    <%= submit_tag "submit" %>
+  </div>
+
+<% end %>
+
+</div>
