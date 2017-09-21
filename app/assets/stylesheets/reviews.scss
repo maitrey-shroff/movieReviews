@@ -1,3 +1,41 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  padding-top: 35px;
+}
+
+img{
+  text-align: center;
+  width: 400px;
+  margin-bottom: 10px !important;
+}
+
+.center_everything{
+  text-align: center;
+}
+
+.jumbotron{
+  min-height: 1000px;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.jumbotron p{
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+
+.jumbotron h2{
+  margin-top: 0px !important;
+  margin-bottom: 20px !important;
+}
+
+.jumbotron h5{
+  font-weight: 400;
+}
