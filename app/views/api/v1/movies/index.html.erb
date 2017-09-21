@@ -16,8 +16,16 @@
           <h2>{{ movie.title }}</h2>
           <img :src="movie.poster"/>
           <h5>Release Date: {{ movie.release_date }}</h5>
-          <p><b>Overview:</b> {{ movie.overview }}</p>
-          <p><a class="btn btn-primary btn-md" :href="movie.review_path" role="button">ReVue movie</a></p>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <p class="panel-title"><b>Overview</b></p>
+            </div>
+            <div class="panel-body">
+              {{ movie.overview }}
+            </div>
+          </div>
+          <a class="btn btn-primary btn-md" :href="movie.review_path" role="button">ReVue movie</a>
+          <a class="btn btn-primary btn-md" :href="movie.movie_reviews_path" role="button">ReVues for this movie</a>
         </div>
       </div> <!-- jtron -->
     </div> <!-- col -->
