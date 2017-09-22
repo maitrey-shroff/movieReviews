@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     data: {
       movies: [],
-      sortAttribute: "title"
+      sortAttribute: "title",
+      sortAscending: false
     },
 
     mounted: function() {
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     methods: {
       setSortAttribute: function(inputSortAttribute) {
         this.sortAttribute = inputSortAttribute;
+        this.sortAscending = !this.sortAscending;
       }
 
     },
@@ -30,7 +32,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     computed: {
       modifiedMovies: function(){
         return this.movies.sort(function(a, b){
-          return a[this.sortAttribute].localeCompare(b[this.sortAttribute]);
+          if (this.sortAscending) {
+            return b[this.sortAttribute].localeCompare(a[this.sortAttribute]);
+          } else {
+            return a[this.sortAttribute].localeCompare(b[this.sortAttribute]);
+          }
         }.bind(this));
       }
 
