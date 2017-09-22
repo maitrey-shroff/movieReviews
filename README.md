@@ -1,24 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To use the app, first clone the code using the github link, then in Terminal, use the command 'bundle install' to install and update all gems. Next, use the command 'rails db:setup' to set up the database. After the database is configured, use the command 'rails s' to start the server. The app is live!
