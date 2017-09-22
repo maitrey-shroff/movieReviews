@@ -1,7 +1,9 @@
 <div class="container" id="app">
 
-  <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('title')">Sort by Title</button>
-  <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('release_date')">Sort by Release Date</button>
+  <div id="sort_buttons">
+    <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('title')">Sort by Title</button>
+    <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('release_date')">Sort by Release Date</button>
+  </div>
 
   <div v-for="movie in modifiedMovies">
     <div class="col-xs-12 col-md-6 col-lg-6">
