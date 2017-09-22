@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     el: "#app",
 
     data: {
-      movies: []
+      movies: [],
+      sortAttribute: "title"
     },
 
     mounted: function() {
@@ -20,14 +21,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
 
     methods: {
+      setSortAttribute: function(inputSortAttribute) {
+        this.sortAttribute = inputSortAttribute;
+      }
 
     },
 
     computed: {
       modifiedMovies: function(){
         return this.movies.sort(function(a, b){
-          return a.title > b.name;
-        });
+          return a[this.sortAttribute].localeCompare(b[this.sortAttribute]);
+        }.bind(this));
       }
 
     }
