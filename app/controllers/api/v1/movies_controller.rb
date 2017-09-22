@@ -1,5 +1,6 @@
 class Api::V1::MoviesController < ApplicationController
 
+  # Method for creating the movies-app API that is used for the AJAX API call in movies.js
   def index
     @movies = []
     x = 1
@@ -8,6 +9,7 @@ class Api::V1::MoviesController < ApplicationController
       @movies = @movies + movies["results"]
       x = x+1
     end
+
   end
 
 end

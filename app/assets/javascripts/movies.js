@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
 
     mounted: function() {
-      
-      //Get data from TMDb API
+
+      //AJAX call to get data from movies-app API (work around becauseTMDb API does not allow ajax requests)
       Rails.ajax({
         url: "http://localhost:3000/api/v1/movies.json",
         type: "GET",
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           this.movies = result;
         }.bind(this)
       });
+
     },
 
     methods: {
@@ -23,6 +24,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
 
     computed: {
+      modifiedMovies: function(){
+        return this.movies.sort(function(a, b){
+          return a.title > b.name;
+        });
+      }
 
     }
   });
