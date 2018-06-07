@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     mounted: function() {
 
-      //AJAX call to get data from movies-app API (work around becauseTMDb API does not allow ajax requests)
+      //AJAX call to get data from movies-app API (work around because The Movie Database API does not allow ajax requests)
       Rails.ajax({
         url: "http://localhost:3000/api/v1/movies.json",
         type: "GET",

@@ -3,6 +3,9 @@
   <div id="sort_buttons">
     <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('title')">Sort by Title</button>
     <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('release_date')">Sort by Release Date</button>
+    <% @genres.each do |genre| %>
+      <div><%= genre["name"] %></div>
+    <% end %>
   </div>
 
   <div v-for="movie in modifiedMovies">
@@ -12,6 +15,7 @@
           <h2>{{ movie.title }}</h2>
           <img :src="movie.poster"/>
           <h5>Release Date: {{ movie.release_date }}</h5>
+          <h5>              {{ movie.genre }}</h5>
           <div class="panel panel-default">
             <div class="panel-heading">
               <p class="panel-title"><b>Overview</b></p>
