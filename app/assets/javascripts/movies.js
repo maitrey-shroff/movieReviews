@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
 
     mounted: function() {
+      // read URL params
 
       // Create a script that contains the data from the API request and call 'myFunc' function with that data as the argument. I'm using JSONP with a callback function to get the list of movies because The Movie Database does not allow standard AJAX calls
       var s
       s = document.createElement("script");
-      s.src = "https://api.themoviedb.org/3/discover/movie?api_key=08680559d6fc65313f828456eb8b4b29&language=en-US&callback=app.myFunc";
+      s.src = "https://api.themoviedb.org/3/discover/movie?api_key=08680559d6fc65313f828456eb8b4b29&language=en-US&sort_by=original_title.asc&include_adult=false&callback=app.myFunc";
       document.body.appendChild(s);
 
 
