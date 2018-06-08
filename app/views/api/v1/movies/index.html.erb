@@ -24,8 +24,8 @@
             </div>
           </div>
           <!-- use what i used for movie poster path here to change where the button navigates -->
-          <a class="btn btn-primary btn-md" :href="movie.review_path" role="button">ReVue movie</a>
-          <a class="btn btn-primary btn-md" :href="movie.movie_reviews_path" role="button">ReVues for this movie</a>
+          <a class="btn btn-primary btn-md" :href="'/new?movie_id=' + movie.id + '&movie_name=' + movie.original_title" role="button">ReVue movie</a>
+          <a class="btn btn-primary btn-md" :href="'/revues/' + movie.id" role="button">ReVues for this movie</a>
         </div>
       </div> <!-- jtron -->
     </div> <!-- col -->
