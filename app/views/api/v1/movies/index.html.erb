@@ -1,8 +1,10 @@
 <div class="container" id="app">
 
   <div id="sort_buttons">
-    <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('title')">Sort by Title</button>
+    <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('original_title')">Sort by Title</button>
     <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('release_date')">Sort by Release Date</button>
+    <button type="button" class="btn btn-primary" v-on:click="nextPage()">Next Page</button>
+    <button type="button" class="btn btn-primary" v-on:click="prevPage()">Previous Page</button>
     <% @genres.each do |genre| %>
       <div><%= genre["name"] %></div>
     <% end %>
