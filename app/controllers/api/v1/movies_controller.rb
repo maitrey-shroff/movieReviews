@@ -8,7 +8,7 @@ class Api::V1::MoviesController < ApplicationController
   # Method for creating the movies-app API that is used for the AJAX API call in movies.js
   def index
     # if page value a param, use that, else ...
-    page = 1
+    page = 3
     request_url = MOVIE_DB_URL + "&api_key=#{ENV["API_KEY"]}"
     genre_request_url = GENRE_URL + "&api_key=#{ENV["API_KEY"]}"
     request_url += "&page=#{page}"

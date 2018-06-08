@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "/revues" => "reviews#index"
   get "/" => "api/v1/movies#index"
+  # get "/1" => "api/v1/movies#index"
 
   get "/new" => "reviews#new"
   post "/create" => "reviews#create"

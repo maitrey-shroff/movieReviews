@@ -13,9 +13,8 @@
       <div class="jumbotron">
         <div class="center_everything">
           <h2>{{ movie.title }}</h2>
-          <img :src="movie.poster"/>
+          <img :src="'https://image.tmdb.org/t/p/w1280/' + movie.poster_path" />
           <h5>Release Date: {{ movie.release_date }}</h5>
-          <h5>              {{ movie.genre }}</h5>
           <div class="panel panel-default">
             <div class="panel-heading">
               <p class="panel-title"><b>Overview</b></p>
