@@ -39,3 +39,10 @@ img{
 h6 {
   font-weight: 200;
 }
+
+.truncate {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
