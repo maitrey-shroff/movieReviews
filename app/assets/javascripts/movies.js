@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     methods: {
 
-      // Creates a script that contains the data from the API request and call 'myFunc' function with that data as the argument. Uses JSONP with a callback function to get the list of movies because The Movie Database does not allow standard AJAX calls
+      // Creates a script that contains the data from the API request and call 'myFunc' function with that data as the argument. Uses JSONP format with a callback function to get the list of movies
       searchMovies: function(){
         var s;
           if (this.sortAttribute == null || this.sortAttribute == ''){
