@@ -48,6 +48,10 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'jasmine'
   gem 'rspec-rails', '~> 3.7'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
 end
 
 group :development do

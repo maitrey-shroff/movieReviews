@@ -1,4 +1,4 @@
-<div class="container" id="app">
+<div class="main-container" id="app">
 
   <div id="sort_buttons">
     <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('original_title')">Sort by Title</button>
@@ -39,7 +39,7 @@
     <div class="col-xs-12 col-md-6 col-lg-6">
       <div class="jumbotron">
         <div class="center_everything">
-          <h2 class="truncate">{{ movie.title }}</h2>
+          <div class="title-container"><h2 class="movie-title">{{ movie.title }}</h2></div>
           <img :src="'https://image.tmdb.org/t/p/w1280/' + movie.poster_path" />
           <h5>Release Date: {{ movie.release_date }}</h5>
           <div class="panel panel-default">

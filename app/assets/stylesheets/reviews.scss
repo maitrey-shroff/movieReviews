@@ -14,7 +14,7 @@ img{
 }
 
 .jumbotron{
-  min-height: 1200px;
+  min-height: 1000px;
   padding-left: 50px !important;
   padding-right: 50px !important;
   padding-top: 40px !important;
@@ -41,9 +41,24 @@ h6 {
   font-weight: 200;
 }
 
-.truncate {
-  width: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.movie-title {
+  font-size: 2.5rem;
+  text-align: center;
+
+}
+
+.title-container {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-body {
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.main-container {
+  padding-top: 70px;
 }
