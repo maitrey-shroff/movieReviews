@@ -1,3 +1,5 @@
+# Database cleaner used to clean database before running specs
+
 RSpec.configure do |config|
   config.use_transactional_fixtures = false
 

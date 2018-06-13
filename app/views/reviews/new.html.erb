@@ -1,44 +1,41 @@
-<div class="container">
+<div class = "main-container">
+  <div class="container">
 
-<% if @review.errors.any? %>
-  <% flash[:danger] = @review.errors.full_messages.join(", ") %>
-<% end %>
-
-  <h2>Movie Title: <%= @movie_name %></h3>
-
-  <h4>Review:</h4>
-
-  <h6>* indicates required field</h6>
-
-  <%= form_tag '/create', method: :post do %>
-
-    <%= hidden_field_tag :movie_id, @review.movie_id, :value => @movie_id %>
-    <%= hidden_field_tag :movie_name, @review.movie_name, :value => @movie_name %>
-
-    <div>
-      <%= label_tag :email_address %> *:
-      <%= text_field_tag :email_address, @review.email_address %>
-    </div>
-
-    <div>
-      <%= label_tag :rating %> (On a scale of 1-10)*:
-      <%= text_field_tag :rating, @review.rating %>
-    </div>
-
-    <div>
-      <%= label_tag :comment %>:
-      <%= text_field_tag :comment, @review.comment %>
-    </div>
-
-    <div>
-      <%= submit_tag "submit" %>
-    </div>
-
+  <% if @review.errors.any? %>
+    <% flash[:danger] = @review.errors.full_messages.join(", ") %>
   <% end %>
 
-<!--     <div>
-      <label for="completion_time">Estimated completion time:</label>
-      <input type="number" required class="form-control" name="completion_time" id="completion_time" placeholder="How long (in minutes) will you take to complete this PrioriTie?">
-    </div> -->
+    <h2>Movie Title: <%= @movie_name %></h2>
 
+    <h4>Review:</h4>
+
+    <h6>* indicates required field</h6>
+
+    <%= form_tag '/create', method: :post do %>
+
+      <%= hidden_field_tag :movie_id, @review.movie_id, :value => @movie_id %>
+      <%= hidden_field_tag :movie_name, @review.movie_name, :value => @movie_name %>
+
+      <div>
+        <%= label_tag :email_address %> *:
+        <%= text_field_tag :email_address, @review.email_address %>
+      </div>
+
+      <div>
+        <%= label_tag :rating %> (On a scale of 1-10)*:
+        <%= text_field_tag :rating, @review.rating %>
+      </div>
+
+      <div>
+        <%= label_tag :comment %>:
+        <%= text_field_tag :comment, @review.comment %>
+      </div>
+
+      <div>
+        <%= submit_tag "submit" %>
+      </div>
+
+    <% end %>
+
+  </div>
 </div>

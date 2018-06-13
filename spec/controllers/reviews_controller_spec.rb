@@ -18,6 +18,8 @@ RSpec.describe ReviewsController, :type => :controller do
     end
   end
 
+
+  # The following specs are failing due to errors I was unable to resolve
   describe "GET #show" do
     it "assigns the requested movie to @movie_id" do
       review = FactoryGirl.create(:review)

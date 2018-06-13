@@ -5,7 +5,7 @@
     <button type="button" class="btn btn-primary" v-on:click="setSortAttribute('release_date')">Sort by Release Date</button>
     <button type="button" class="btn btn-primary" v-on:click="prevPage()">Previous Page</button>
     <button type="button" class="btn btn-primary" v-on:click="nextPage()">Next Page</button>
-    <p><b>Page: {{ pageNumber }}</b></p>
+    <b>Page: {{ pageNumber }}</b>
   </div>
 
   <div class="dropdown">
@@ -13,24 +13,24 @@
         Filter by Genre:
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" v-on:click="filterGenre(28)">Action | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(12)">Adventure | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(16)">Animation | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(35)">Comedy | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(80)">Crime | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(99)">Documentary | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(18)">Drama | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(10751)">Family | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(14)">Fantasy | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(36)">History | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(27)">Horror | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(10402)">Music | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(9648)">Mystery | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(10749)">Romance | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(878)">Science Fiction | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(10770)">TV Movie | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(53)">Thriller | </a>
-        <a class="dropdown-item" v-on:click="filterGenre(10752)">War | </a>
+        <a class="dropdown-item" v-on:click="filterGenre(28)">Action</a>
+        <a class="dropdown-item" v-on:click="filterGenre(12)">Adventure</a>
+        <a class="dropdown-item" v-on:click="filterGenre(16)">Animation</a>
+        <a class="dropdown-item" v-on:click="filterGenre(35)">Comedy</a>
+        <a class="dropdown-item" v-on:click="filterGenre(80)">Crime</a>
+        <a class="dropdown-item" v-on:click="filterGenre(99)">Documentary</a>
+        <a class="dropdown-item" v-on:click="filterGenre(18)">Drama</a>
+        <a class="dropdown-item" v-on:click="filterGenre(10751)">Family</a>
+        <a class="dropdown-item" v-on:click="filterGenre(14)">Fantasy</a>
+        <a class="dropdown-item" v-on:click="filterGenre(36)">History</a>
+        <a class="dropdown-item" v-on:click="filterGenre(27)">Horror</a>
+        <a class="dropdown-item" v-on:click="filterGenre(10402)">Music</a>
+        <a class="dropdown-item" v-on:click="filterGenre(9648)">Mystery</a>
+        <a class="dropdown-item" v-on:click="filterGenre(10749)">Romance</a>
+        <a class="dropdown-item" v-on:click="filterGenre(878)">Science Fiction</a>
+        <a class="dropdown-item" v-on:click="filterGenre(10770)">TV Movie</a>
+        <a class="dropdown-item" v-on:click="filterGenre(53)">Thriller</a>
+        <a class="dropdown-item" v-on:click="filterGenre(10752)">War</a>
         <a class="dropdown-item" v-on:click="filterGenre(37)">Western</a>
       </div>
   </div>

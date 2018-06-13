@@ -1,6 +1,8 @@
 require 'faker'
 require 'factory_girl'
 
+# Factory used as a building block for test data
+
 FactoryGirl.define do
   factory :review do |r|
     r.movie_id { Faker::Number.number(6)  }

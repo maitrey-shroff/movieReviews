@@ -1,20 +1,22 @@
-<div class="container">
-  <table class="table">
-    <tr>
-      <th>Movie Title</th>
-      <th>User</th> 
-      <th>Date</th>
-      <th>Rating (out of 10)</th>
-      <th>Comment</th>
-    </tr>
-    <% @reviews.each do |review| %>
+<div class="main-container">
+  <div class="container">
+    <table class="table">
       <tr>
-        <td><%= review.movie_name %></td>
-        <td><%= review.email_address %></td>
-        <td><%= review.created_at %></td>
-        <td><%= review.rating %></td>
-        <td><%= review.comment %></td>
+        <th>Movie Title</th>
+        <th>User</th> 
+        <th>Date</th>
+        <th>Rating (out of 10)</th>
+        <th>Comment</th>
       </tr>
-    <% end %>
-  </table>
+      <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.movie_name %></td>
+          <td><%= review.email_address %></td>
+          <td><%= review.created_at %></td>
+          <td><%= review.rating %></td>
+          <td><%= review.comment %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>

@@ -30,6 +30,7 @@ class ReviewsController < ApplicationController
     @review = Review.create({movie_id: params[:movie_id], movie_name: params[:movie_name], email_address: params[:email_address], review_date: params[:review_date], rating: params[:rating], comment: params[:comment]})
     if @review.save
       redirect_to "/revues"
+      flash[:notify] = "Your ReVue was saved!"
     else
       redirect_to request.referrer
       flash[:danger] = "Please fill in a valid response for all required fields"

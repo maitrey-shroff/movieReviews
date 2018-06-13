@@ -1,6 +1,8 @@
 require 'spec_helper'
 require 'factory_girl'
 
+# Specs for Review model
+
 describe Review do
   it "has a valid factory" do
     FactoryGirl.create(:review).should be_valid
